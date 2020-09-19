@@ -6,7 +6,39 @@
     height: 20px;
     width: 28px;
     cursor: pointer;
-    @include transition1
+    @include transition1;
+
+    &_burger{
+        position: absolute;
+        right:0;
+        top:0.5rem;
+        @include burgerDimensions;
+        @include transition1;
+        background-color: $secondary-color;
+        
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: -8px;
+            @include burgerDimensions;
+            @include transition1;
+            background-color: $secondary-color;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 7px;
+            @include burgerDimensions;
+            @include transition1;
+            background-color: $secondary-color;
+        }
+
+        &.open{//JS will toggle that i.e. add/remove open class
+            transform: rotate(720deg);
+            background: transparent;
+        }
+    }
 }
 .menu-nav{
     display: flex;

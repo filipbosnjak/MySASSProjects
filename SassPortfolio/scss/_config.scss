@@ -17,3 +17,7 @@ $mobile: 800px;
         @content;//This can be replaced with the code we need depending on the situation
     }
 }
+@mixin burgerDimensions{
+    width: 28px;
+    height:3px;
+}
