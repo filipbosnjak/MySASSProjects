@@ -7,3 +7,13 @@ $mobile: 800px;
     padding:0;
     box-sizing: border-box; 
 }
+
+@mixin transition1{
+    transition: all .5s ease-in-out ;
+}
+
+@mixin mobile {
+    @media(max-width: $mobile){
+        @content;//This can be replaced with the code we need depending on the situation
+    }
+}
