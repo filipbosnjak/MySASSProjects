@@ -6,6 +6,24 @@
           box-sizing: border-box;
 }
 
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url(/dist/img/model-1.jpg) center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(/dist/img/model-1.jpg) center top;
+  background-size: cover;
+}
+
+.home_name {
+  font-size: 5rem;
+  padding: 1rem 0;
+}
+
 body {
   background-color: #272727;
   color: #ffffff;
@@ -41,24 +59,38 @@ main {
 
 main .social-icons {
   position: fixed;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: 4rem;
+  left: 45%;
 }
 
 main .social-icons a {
   padding: 0.4rem;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
 }
 
 main .social-icons a:hover {
   color: #188FE4;
 }
 
+@media (max-width: 800px) {
+  main .social-icons {
+    left: 39%;
+  }
+}
+
 footer {
   font-size: 1rem;
   position: fixed;
   bottom: 0.4rem;
-  right: 1rem;
+  left: 44%;
   text-align: right;
   padding: 1rem;
+}
+
+@media (max-width: 800px) {
+  footer {
+    left: 36%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
