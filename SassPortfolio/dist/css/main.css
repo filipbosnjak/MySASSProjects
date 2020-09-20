@@ -78,31 +78,35 @@
 .menu-btn_burger.open {
   -webkit-transform: rotate(720deg);
           transform: rotate(720deg);
+  /*&::after{
+                top:8px;
+            } -> Back to normal*/
   background: transparent;
 }
 
-.menu-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.menu-btn_burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
 }
 
-.menu-nav li {
-  padding: 1rem 6rem;
+.menu-btn_burger.open::after {
+  -webkit-transform: rotate(-45deg) translate(3px, -5px);
+          transform: rotate(-45deg) translate(3px, -5px);
 }
 
-@media (max-width: 800px) {
-  .menu-nav li {
-    padding: 1rem;
-  }
-}
+/*
+.menu-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    li{
+        padding: 1rem 6rem;
+        @include mobile(){
+            padding:1rem;
+        }
+    }
+}*/
 body {
   background-color: #272727;
   color: #ffffff;

@@ -36,10 +36,21 @@
 
         &.open{//JS will toggle that i.e. add/remove open class
             transform: rotate(720deg);
+            //background: transparent;
+            /*&::after{
+                top:8px;
+            } -> Back to normal*/
             background: transparent;
+            &::before {
+                transform:rotate(45deg) translate(5px,8px);
+            }
+            &::after{
+                transform: rotate(-45deg) translate(3px,-5px);
+            }
         }
     }
 }
+/*
 .menu-nav{
     display: flex;
     align-items: center;
@@ -51,4 +62,4 @@
             padding:1rem;
         }
     }
-}
+}*/
