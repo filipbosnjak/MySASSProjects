@@ -186,8 +186,123 @@ body .formc a:hover {
           transform: scale(1.05);
 }
 
-.animation {
-  display: none;
+body .formc button {
+  outline: none;
+  background-color: #93FF96;
+  width: 100%;
+  height: 20px;
+  border: 0;
+  border-radius: 25px;
+  padding: 12px 40px;
+  margin-top: 20px;
+  font-size: 17px;
+  color: #234368;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body .formc button:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+body .formc button:focus {
+  color: #93FF96;
+  background-color: #f0f8ff;
+}
+
+body .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  bottom: -150px;
+  -webkit-animation: animated 7s linear infinite;
+          animation: animated 7s linear infinite;
+  opacity: 0.5;
+}
+
+body li:nth-child(1) {
+  left: 10%;
+  font-size: 20px;
+  color: #234368;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+body li:nth-child(2) {
+  left: 15%;
+  width: 20px;
+  height: 20px;
+  color: #234368;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  border-radius: 20px;
+  background-color: #234368;
+}
+
+body li:nth-child(3) {
+  left: 26%;
+  font-size: 30px;
+  color: #234368;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+body li:nth-child(4) {
+  left: 33%;
+  width: 25px;
+  height: 25px;
+  color: #234368;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  border-radius: 20px;
+  background-color: #234368;
+}
+
+body li:nth-child(5) {
+  left: 50%;
+  font-size: 20px;
+  color: #234368;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+body li:nth-child(6) {
+  left: 60%;
+  width: 40px;
+  height: 40px;
+  color: #234368;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  border-radius: 25px;
+  background-color: #234368;
+}
+
+body li:nth-child(7) {
+  left: 70%;
+  font-size: 30px;
+  color: #234368;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+body li:nth-child(9) {
+  left: 90%;
+  font-size: 40px;
+  color: #234368;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 @-webkit-keyframes check {
@@ -201,6 +316,28 @@ body .formc a:hover {
   50% {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes animated {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-880px) rotate(360deg);
+            transform: translateY(-880px) rotate(360deg);
+  }
+}
+
+@keyframes animated {
+  0% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-880px) rotate(360deg);
+            transform: translateY(-880px) rotate(360deg);
   }
 }
 /*# sourceMappingURL=main.css.map */
