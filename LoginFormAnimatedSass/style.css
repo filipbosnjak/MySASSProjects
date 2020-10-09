@@ -7,6 +7,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/*::-webkit-input-placeholder{
+    color:rgba(255,255,255); 
+ }*/
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,5 +49,134 @@ section {
 .box:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 20px;
+  pointer-events: none;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 15%, transparent 50%, transparent 85%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.box .form {
+  position: relative;
+  width: 100%;
+}
+
+.box .form p {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.box .form .inBx {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.box .form .inBx input {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  padding: 8px 10px;
+  padding-left: 35px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.box .form .inBx input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.box .form .inBx input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.box .form .inBx input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.box .form .inBx input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.box .form .inBx i {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.box .form .inBx input[type="submit"] {
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding-left: 0px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.box .form .inBx input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #756f6f;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.box .form .remember {
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.box .form .remember input[type=checkbox] {
+  margin: 0 10px;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.box .form .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .form .footer .p {
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0 15px;
+  margin-top: 5px;
+}
+
+.box .form .footer .p a {
+  text-decoration: none;
+  color: #d3d0d0;
+}
+
+.box .form .footer .p a:hover {
+  color: rgba(211, 208, 208, 0.5);
 }
 /*# sourceMappingURL=style.css.map */
