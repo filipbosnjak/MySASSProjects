@@ -578,6 +578,19 @@ footer .middle .btn {
   position: relative;
 }
 
+footer .middle .btn:hover i {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+footer .middle .btn:hover::before {
+  -webkit-animation: aaa 0.7s 1;
+          animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
 footer .middle .btn::before {
   content: "";
   position: absolute;
@@ -595,19 +608,6 @@ footer .middle .btn i {
   font-size: 26px;
   -webkit-transition: 0.15s linear;
   transition: 0.15s linear;
-}
-
-footer .middle .btn i:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  color: #f1f1f1;
-}
-
-.btn:hover::before {
-  -webkit-animation: aaa 0.7s 1;
-          animation: aaa 0.7s 1;
-  top: -10%;
-  left: -10%;
 }
 
 @-webkit-keyframes aaa {
