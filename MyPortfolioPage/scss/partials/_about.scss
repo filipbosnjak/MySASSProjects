@@ -1,6 +1,6 @@
 section{
     padding: 40px 0;
-    background-color: #f1f1f1;
+    background-color: $main-white;
     padding-bottom:200px;
 
     .section-title{
@@ -18,7 +18,7 @@ section{
          &::before{
             content: "";
             position: absolute;
-            width: 115px;
+            width: 125px;
             height: 3px;
             background-color: #111;
             bottom: 0;

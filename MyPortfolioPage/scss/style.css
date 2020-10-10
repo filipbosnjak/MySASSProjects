@@ -88,7 +88,7 @@ html {
 }
 
 .sticky {
-  background-color: #fff;
+  background-color: #f1f1f1;
   padding: 15px 0;
 }
 
@@ -186,7 +186,7 @@ html {
 
 section {
   padding: 40px 0;
-  background-color: #f1f1f1;
+  background-color: #fff;
   padding-bottom: 200px;
 }
 
@@ -206,7 +206,7 @@ section .section-title {
 section .section-title::before {
   content: "";
   position: absolute;
-  width: 115px;
+  width: 125px;
   height: 3px;
   background-color: #111;
   bottom: 0;
@@ -276,5 +276,160 @@ section .section-title::before {
 #about .about-content .about-text p a {
   color: #185BC9;
   font-weight: 800;
+}
+
+section.dark {
+  background-color: #353b48;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/bg2.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bg2.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section.dark .title2 {
+  color: #fff;
+}
+
+section.dark .title2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #f1f1f1;
+  bottom: 0;
+  left: calc(50%-40px);
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.skills .section-title {
+  color: #fff;
+}
+
+.skills .skill {
+  width: calc(32%);
+  text-align: center;
+  border: 1px solid #185BC9;
+  border-radius: 6px;
+  margin: 20px 0px;
+  padding: 70px 20px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.skills .skill:hover {
+  background-color: #185BC9;
+}
+
+.skills .skill:hover .icon {
+  color: #fff;
+}
+
+.skills .skill .icon {
+  color: #185BC9;
+  font-size: 40px;
+  margin-bottom: 20px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+#works {
+  background-color: #353b48;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#works .title4 {
+  color: #fff;
+}
+
+#works .title4::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 3px;
+  background-color: #fff;
+  bottom: 0;
+  left: calc(50%-40px);
+}
+
+#works .works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 98%;
+  margin: 0 auto;
+}
+
+#works .works .work {
+  width: calc(32%);
+  overflow: hidden;
+  border-radius: 6px;
+  margin: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+#works .works .work:hover::before {
+  opacity: .5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#works .works .work:hover img {
+  -webkit-transform: scale(1.6) rotate(25deg);
+          transform: scale(1.6) rotate(25deg);
+}
+
+#works .works .work:hover .info {
+  opacity: 1;
+}
+
+#works .works .work::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: var(--main-color);
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+#works .works .work .info {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 40px;
+  color: #f1f1f1;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
+  opacity: 0;
+}
+
+#works .works img {
+  width: 100%;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
 }
 /*# sourceMappingURL=style.css.map */

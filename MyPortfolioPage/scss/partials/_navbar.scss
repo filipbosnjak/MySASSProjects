@@ -28,7 +28,7 @@
         span{
             display: block;
             height: 3px;
-            background-color: #fff;
+            background-color: $main-white;
             margin: 6px 0;
             position: relative;
             transition: .3s linear;
@@ -58,7 +58,7 @@
 }
 
 .sticky{
-    background-color:#fff;
+    background-color:$main-greyish;
     padding:15px 0;
 
     .navbar-menu a{
