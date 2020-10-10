@@ -1,6 +1,8 @@
-@import 'config';
-@import 'variables';
+@import './partials/config';
+@import './partials/variables';
 
-@import 'navbar';
+@import './partials/navbar';
 
-@import 'home';
+@import './partials/home';
+
+@import './partials/about';
