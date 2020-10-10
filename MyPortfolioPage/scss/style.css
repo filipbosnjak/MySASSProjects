@@ -504,6 +504,7 @@ section.dark .title2::before {
   padding: 20px;
   border-radius: 4px;
   color: #fff;
+  font-size: 18px;
 }
 
 #contact .contact-form .nameZone, #contact .contact-form .emailZone {
