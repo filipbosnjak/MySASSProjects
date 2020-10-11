@@ -86,25 +86,29 @@ section{
 }
 
 @include mobile{
-    .about-content{
-        width: 90%;
-        margin:0 auto;
-
-        h3{
-            display: flex;
-            flex-direction: column;
-            span:nth-child(1):before,
-            span:nth-child(2):before,
-            span:nth-child(3):before,
-            span:nth-child(3):after{
-                content: "";
-                width: 6px;
-                height: 6px;
-                background-color: #444;
-                display: inline-block;
-                border-radius: 50%;
-                margin: 0 14px;
-                }
+    #about{
+        .about-content{
+            width: 90%;
+            margin:0 auto;
+            .about-pic{
+                margin:0;
+            }
+            h3{
+                display: flex;
+                flex-direction: column;
+                span:nth-child(1):before,
+                span:nth-child(2):before,
+                span:nth-child(3):before,
+                span:nth-child(3):after{
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    background-color: #444;
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin: 0 14px;
+                    }
+            }
         }
     }
 }

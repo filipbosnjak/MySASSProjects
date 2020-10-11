@@ -21,6 +21,18 @@ html {
   background-color: #353b48;
 }
 
+@media (max-width: 800px) {
+  html {
+    overflow-x: hidden !important;
+  }
+  body {
+    position: relative;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .navbar {
   position: fixed;
   background-color: transparent;
@@ -96,9 +108,6 @@ html {
 }
 
 @media (max-width: 800px) {
-  html {
-    overflow-x: hidden !important;
-  }
   .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -143,7 +152,7 @@ html {
     padding: 10px 0;
   }
   .sticky .menu-toggler {
-    margin-top: 50px;
+    margin-top: 5px;
   }
   .sticky .menu-toggler span {
     background-color: black;
@@ -346,11 +355,14 @@ section .section-title::before {
 }
 
 @media (max-width: 800px) {
-  .about-content {
+  #about .about-content {
     width: 90%;
     margin: 0 auto;
   }
-  .about-content h3 {
+  #about .about-content .about-pic {
+    margin: 0;
+  }
+  #about .about-content h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -359,10 +371,10 @@ section .section-title::before {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .about-content h3 span:nth-child(1):before,
-  .about-content h3 span:nth-child(2):before,
-  .about-content h3 span:nth-child(3):before,
-  .about-content h3 span:nth-child(3):after {
+  #about .about-content h3 span:nth-child(1):before,
+  #about .about-content h3 span:nth-child(2):before,
+  #about .about-content h3 span:nth-child(3):before,
+  #about .about-content h3 span:nth-child(3):after {
     content: "";
     width: 6px;
     height: 6px;
@@ -743,7 +755,7 @@ footer .middle .btn::before {
   background: #185BC9;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  left: -110%;
+  right: -110%;
   top: 90%;
 }
 
@@ -788,6 +800,12 @@ footer .middle .btn i {
   .middle {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .middle .btn::before {
+    display: none;
+  }
+  .middle .btn:hover i {
+    color: #185BC9 !important;
   }
 }
 

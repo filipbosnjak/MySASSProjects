@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*{
+@import '../mixins/resp';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -15,4 +18,16 @@ html{
 }
 ::-webkit-scrollbar-thumb{
     background-color: #353b48;
+}
+
+@include mobile{
+    html{
+        overflow-x: hidden !important;
+    }
+    body{
+        position: relative;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }

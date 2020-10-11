@@ -67,9 +67,7 @@
 }
 
 @include mobile{
-    html{
-        overflow-x: hidden !important;
-    }
+    
     
     .navbar{//Without this a{} gets overriden by the a{} up.
         display: flex;
@@ -111,7 +109,7 @@
     .sticky{
         padding: 10px 0 ;
         .menu-toggler{
-            margin-top: 50px;
+            margin-top: 5px;
             span{
                 background-color: black;
             }

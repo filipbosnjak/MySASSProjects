@@ -55,7 +55,7 @@ footer{
                 height: 120%;
                 background: $main-blue;
                 transform:rotate(45deg);
-                left: -110%;
+                right: -110%;
                 top: 90%;
                 
                 
@@ -85,5 +85,15 @@ footer{
  @include mobile{
      .middle{
          flex-wrap: wrap;
+         .btn{
+             &::before{
+                 display: none;
+             }
+             &:hover{
+                 i{
+                 color: $main-blue!important;
+                 }
+             }
+         }
      }
  }
