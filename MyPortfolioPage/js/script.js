@@ -26,6 +26,8 @@ $(document).ready(function(){
     });
 
     //Animated reveal
+   
+    if(window.innerWidth>800){
     window.sr = ScrollReveal();
 
     sr.reveal('.navbar-menu',{
@@ -178,7 +180,7 @@ $(document).ready(function(){
       delay:500,
       mobile: false
     });
-      
+  }
    window.onresize = () =>{
 
     if(window.innerWidth>800){
@@ -338,6 +340,6 @@ $(document).ready(function(){
         ScrollReveal().destroy();
       }
    }
-  
+
   
   });
