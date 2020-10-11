@@ -1,3 +1,6 @@
+@import '../mixins/resp';
+
+
 footer{
     background:linear-gradient( rgba(0,0,0, 0.7), rgba(0,0,0, 0.7) ),url(../images/code_lines_programming_130775_3840x2160.jpg) no-repeat center;
     background-size: cover;
@@ -65,9 +68,7 @@ footer{
         }
     }
   }
-  .btn:hover::before{
-    
-}
+  
 @keyframes aaa{
     0%{left: -110%;
      top: 90%;
@@ -81,3 +82,8 @@ footer{
     }
  }
  
+ @include mobile{
+     .middle{
+         flex-wrap: wrap;
+     }
+ }

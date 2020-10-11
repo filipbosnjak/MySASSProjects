@@ -1,3 +1,5 @@
+@import '../mixins/resp';
+
 #works{
     background-color: #353b48;
     background:linear-gradient( rgba(0,0,0, 0.7), rgba(0,0,0, 0.7) ),url(../images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg) no-repeat center;
@@ -73,4 +75,15 @@
         transition: .4s linear;
       }
 }
+}
+
+@include mobile{
+    #works{
+        .works{
+            .work{
+                width: 49%;
+            }
+        }
+        
+    }
 }

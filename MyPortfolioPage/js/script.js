@@ -13,11 +13,17 @@ $(document).ready(function(){
       scroll(0,0);
     })
 
-  
+    // Toggling responsive navbar
     $('.menu-toggler').click(function(){
       $(this).toggleClass("active");
       $(".navbar-menu").toggleClass("active");
     });
+    $('.link').click(function(){
+      $(this).toggleClass("active");
+      $(".navbar-menu").toggleClass("active");
+    });
+
+    //Animated reveal
     window.sr = ScrollReveal();
 
     sr.reveal('.navbar-menu',{
