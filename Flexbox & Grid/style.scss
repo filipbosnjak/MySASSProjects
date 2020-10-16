@@ -29,11 +29,18 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: row;
+
+    //flex-start center flex-end
+    //justify-content - alignment along the main axis - that is usually horizontal axis
+    //align-itmes - alignment on the cross axis - usually vertical axis
+
     //flex-wrap: wrap;// content will align/fall down as the widht shrinks
 
 
     //flex-flow - direction and wrap combined
     //flex-flow: column wrap 
+
+    //justify-content:space-evenly -> items are distributed so that the spacing between any two items (and the space to the edges) is equal
 
     position: absolute;
     width: 100%;//Combined with align-itmes:center and top:50vh it becomes centered on a screen
@@ -43,12 +50,14 @@ body{
         width: 300px;
         height: 50px;
         border: 1px solid blue;
+        order: 1;//Default is 0
     }
     .green{
         //flex:2; //So we have three children of wrapper with flex 1,2,1. That gives 4 in total of which blue takes 1, green takes 2 and red takes 1
         width: 500px;
         height: 100px;
         border: 1px solid green;
+        order:2;
     }
     .red{
         //flex: 1;
@@ -78,3 +87,38 @@ body{
         }
     }
   }
+
+  .wrapper1{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid black;
+    position: absolute;
+    width: 100%;
+    top: 80vh;
+    .blue1{
+        width: 250px;
+        height: 50px;
+        border: 1px solid blue;
+        order: 1;
+        //flex-shrink: 1;
+        //flex-basis: 300px; //works similar to min-widht but overflow in y direction is hidden
+    }
+    .green1{
+        
+        width: 250px;
+        height: 50px;
+        border: 1px solid green;
+        order:2;
+        //flex-shrink: 1;
+    }
+    .red1{
+        width: 250px;
+        height: 50px;
+        border: 1px solid red;
+        //flex-shrink: 3; //As we shring the width of the screen red1 div shrinks more then other two
+    }
+    
+}
