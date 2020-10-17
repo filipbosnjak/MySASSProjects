@@ -9,7 +9,7 @@
 
 body {
   position: relative;
-  height: 200vh;
+  height: 300vh;
 }
 
 body h1 {
@@ -18,7 +18,7 @@ body h1 {
 
 body .title {
   position: absolute;
-  top: 50%;
+  top: 31%;
 }
 
 body .upleft {
@@ -124,19 +124,57 @@ body .downright {
 }
 
 .grid {
-  width: 100%;
+  min-width: 100%;
   height: 100vh;
   position: absolute;
-  top: 53%;
+  top: 33%;
   border: black 1px solid;
   display: grid;
-  grid-template-columns: 250px auto 250px;
-  grid-template-rows: 20px 20px 20px;
+  /*
+    grid-template-columns: repeat(3,1fr);//33% 33% 33%; //Better: 1fr 1fr 1fr -> repeat(3,1fr)
+    grid-template-rows: 33% 33% 33%;
+    */
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  grid-gap: 30px;
 }
 
 .grid .item {
   width: 200px;
   height: 200px;
   border: blue 1px solid;
+  transition: 1s ease-in;
+}
+
+.grid .item:hover {
+  background: blue;
+  /*background: #373B44;  
+            background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
+            background: linear-gradient(to right, #4286f4, #373B44);
+            */
+}
+
+.page {
+  position: absolute;
+  top: 67%;
+  width: 100%;
+  height: 50vh;
+  border: 1px black solid;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40px 200px 40px;
+}
+
+.page .item {
+  border: 1px blue solid;
+  border-radius: 5px;
+}
+
+.page .header {
+  grid-column: 1 / 3;
+}
+
+.page .footer {
+  grid-column: 1 / 3;
 }
 /*# sourceMappingURL=style.css.map */
