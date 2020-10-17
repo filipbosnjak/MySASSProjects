@@ -157,12 +157,14 @@ body .downright {
   position: absolute;
   top: 67%;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
+  padding: 30px;
   border: 1px black solid;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 7fr;
   grid-template-rows: 40px 200px 40px;
+  text-align: center;
 }
 
 .page .item {
@@ -171,10 +173,31 @@ body .downright {
 }
 
 .page .header {
-  grid-column: 1 / 3;
+  grid-column: 2 / -1;
+}
+
+.page .menu {
+  grid-row: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page .menu .menu-itm {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  border: 1px red solid;
+  transition: .5s ease-in-out;
+}
+
+.page .menu .menu-itm:hover {
+  background-color: red;
+  color: white;
 }
 
 .page .footer {
-  grid-column: 1 / 3;
+  grid-column: 2/-1;
 }
 /*# sourceMappingURL=style.css.map */

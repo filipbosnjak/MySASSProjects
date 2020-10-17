@@ -168,21 +168,41 @@ body{
     position: absolute;
     top:67%;
     width: 100%;
-    height:50vh;
+    height:100vh;
+    padding: 30px;
     border: 1px black solid;
 
-    display: grid;
+    display: grid; //Grid property propagates to all the page children
     grid-gap:10px ;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 7fr;//repeat(2,1fr);
     grid-template-rows: 40px 200px 40px;
+    text-align: center;
     .item{
         border: 1px blue solid;
         border-radius:5px ;
     }
     .header{
-        grid-column: 1 / 3; // Like this header and footer take the whole
+        grid-column: 2 / -1 ;//3; // Like this header and footer take the whole row and will expand trough the entire widht. If we have two columns then we have three separating lines. Thats why start is at 1 and end is at 3
+    }
+    .menu{ 
+        grid-row: 1 / -1; //Like this menu expands trough the entire height of the page.
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        .menu-itm{
+            text-align: center;
+            width: 100px;
+            height: 40px;
+            border: 1px red solid;
+            transition: .5s ease-in-out;
+            &:hover{
+                background-color: red;
+                color: white;
+            }
+        }
     }
     .footer{
-        grid-column: 1 / 3;
+        grid-column: 2 / -1// -1 means till the end cause we dont know how many columns we will have in the future;
     }
 }
