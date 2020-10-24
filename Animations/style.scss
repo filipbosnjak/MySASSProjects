@@ -1,0 +1,75 @@
+.blue{
+    width:500px;
+    height:500px;
+    background-color: blue;
+
+    .yellow{
+        width:200px;
+        height: 200px;
+        background-color: yellowgreen;
+        transform: translateX(0%);
+        //transition: /*transform*/ .7s cubic-bezier(0, 0.8, 1, 1) /*1s*/; 
+        //Transition has 4 extensions: 
+        //-property: specifies which property is to be animated, with transform background changes automaticaly and without it both background and transformation are animated
+        //-duration: how long we want our animation to last
+        //-delay: specifies the delay
+        //
+    }
+
+    &:hover{
+        .yellow{
+            background-color: black;
+            //transform: translateX(150%);
+            animation: name 3s
+        }
+        @keyframes name {
+            0%{
+                transform: translateX(0) translateY(0);
+            }
+            25%{
+                transform: translateY(150%);
+            }
+            50%{
+                transform: translateX(150%) translateY(150%);
+                
+            }
+            75%{
+                transform: translateX(150%) translateY(0%);
+            }
+            100%{
+                transform: translateX(0) translateY(0);
+            }
+        }
+    }
+}
+
+
+button{
+    margin: 10px;
+    animation: animate 1s ease-in-out infinite  ;
+    transition: linear;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: gray;
+    outline: none;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1);
+        
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,32 @@
+.blue { width: 500px; height: 500px; background-color: blue; }
+
+.blue .yellow { width: 200px; height: 200px; background-color: yellowgreen; -webkit-transform: translateX(0%); transform: translateX(0%); }
+
+.blue:hover .yellow { background-color: black; -webkit-animation: name 3s; animation: name 3s; }
+
+@-webkit-keyframes name { 0% { -webkit-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); }
+  25% { -webkit-transform: translateY(150%); transform: translateY(150%); }
+  50% { -webkit-transform: translateX(150%) translateY(150%); transform: translateX(150%) translateY(150%); }
+  75% { -webkit-transform: translateX(150%) translateY(0%); transform: translateX(150%) translateY(0%); }
+  100% { -webkit-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); } }
+
+@keyframes name { 0% { -webkit-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); }
+  25% { -webkit-transform: translateY(150%); transform: translateY(150%); }
+  50% { -webkit-transform: translateX(150%) translateY(150%); transform: translateX(150%) translateY(150%); }
+  75% { -webkit-transform: translateX(150%) translateY(0%); transform: translateX(150%) translateY(0%); }
+  100% { -webkit-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); } }
+
+button { margin: 10px; -webkit-animation: animate 1s ease-in-out infinite; animation: animate 1s ease-in-out infinite; -webkit-transition: linear; transition: linear; width: 100px; height: 30px; border-radius: 5px; border: none; background-color: gray; outline: none; }
+
+@-webkit-keyframes animate { 0% { -webkit-transform: scale(1); transform: scale(1); }
+  25% { -webkit-transform: scale(1.2); transform: scale(1.2); }
+  50% { -webkit-transform: scale(1); transform: scale(1); }
+  75% { -webkit-transform: scale(1.1); transform: scale(1.1); }
+  100% { -webkit-transform: scale(1); transform: scale(1); } }
+
+@keyframes animate { 0% { -webkit-transform: scale(1); transform: scale(1); }
+  25% { -webkit-transform: scale(1.2); transform: scale(1.2); }
+  50% { -webkit-transform: scale(1); transform: scale(1); }
+  75% { -webkit-transform: scale(1.1); transform: scale(1.1); }
+  100% { -webkit-transform: scale(1); transform: scale(1); } }
+/*# sourceMappingURL=style.css.map */
