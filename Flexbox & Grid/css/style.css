@@ -1,203 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Commissioner', sans-serif;
-  border-radius: 8px;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Commissioner", sans-serif; border-radius: 8px; }
 
-body {
-  position: relative;
-  height: 300vh;
-}
+body { position: relative; height: 300vh; }
 
-body h1 {
-  font-weight: 400;
-}
+body h1 { font-weight: 400; }
 
-body .title {
-  position: absolute;
-  top: 31%;
-}
+body .title { position: absolute; top: 31%; }
 
-body .upleft {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 50px;
-  height: 50px;
-  border: 1px solid blue;
-}
+body .upleft { position: absolute; top: 20%; left: 20%; width: 50px; height: 50px; border: 1px solid blue; }
 
-body .downright {
-  position: absolute;
-  top: 80%;
-  left: 80%;
-  width: 50px;
-  height: 50px;
-  border: 1px solid blue;
-}
+body .downright { position: absolute; top: 80%; left: 80%; width: 50px; height: 50px; border: 1px solid blue; }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  position: absolute;
-  width: 100%;
-  top: 50vh;
-}
+.wrapper { display: flex; align-items: center; justify-content: center; flex-direction: row; position: absolute; width: 100%; top: 50vh; }
 
-.wrapper .blue {
-  width: 300px;
-  height: 50px;
-  border: 1px solid blue;
-  order: 1;
-}
+.wrapper .blue { width: 300px; height: 50px; border: 1px solid blue; order: 1; }
 
-.wrapper .green {
-  width: 500px;
-  height: 100px;
-  border: 1px solid green;
-  order: 2;
-}
+.wrapper .green { width: 500px; height: 100px; border: 1px solid green; order: 2; }
 
-.wrapper .red {
-  width: 50px;
-  height: 80px;
-  border: 1px solid red;
-}
+.wrapper .red { width: 50px; height: 80px; border: 1px solid red; }
 
-.cards {
-  position: absolute;
-  border: 1px solid black;
-  width: 100%;
-  height: 30vh;
-  top: 5%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+.cards { position: absolute; border: 1px solid black; width: 100%; height: 30vh; top: 2%; display: flex; justify-content: space-around; align-items: center; }
 
-.cards .card {
-  border: 1px solid orangered;
-  width: 100px;
-  height: 100px;
-  transition: .3s ease-in;
-}
+.cards .card { border: 1px solid orangered; width: 100px; height: 100px; transition: 0.3s ease-in; }
 
-.cards .card:hover {
-  background-color: orangered;
-}
+.cards .card:hover { background-color: orangered; }
 
-.wrapper1 {
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
-  border: 1px solid black;
-  position: absolute;
-  width: 100%;
-  top: 80vh;
-}
+.wrapper1 { padding: 20px 0; display: flex; align-items: center; justify-content: space-around; flex-direction: row; border: 1px solid black; position: absolute; width: 100%; top: 80vh; }
 
-.wrapper1 .blue1 {
-  width: 250px;
-  height: 50px;
-  border: 1px solid blue;
-  order: 1;
-}
+.wrapper1 .blue1 { width: 250px; height: 50px; border: 1px solid blue; order: 1; }
 
-.wrapper1 .green1 {
-  width: 250px;
-  height: 50px;
-  border: 1px solid green;
-  order: 2;
-}
+.wrapper1 .green1 { width: 250px; height: 50px; border: 1px solid green; order: 2; }
 
-.wrapper1 .red1 {
-  width: 250px;
-  height: 50px;
-  border: 1px solid red;
-}
+.wrapper1 .red1 { width: 250px; height: 50px; border: 1px solid red; }
 
-.grid {
-  min-width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 33%;
-  border: black 1px solid;
-  display: grid;
-  /*
-    grid-template-columns: repeat(3,1fr);//33% 33% 33%; //Better: 1fr 1fr 1fr -> repeat(3,1fr)
-    grid-template-rows: 33% 33% 33%;
-    */
-  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
-  grid-gap: 30px;
-}
+.grid { min-width: 100%; min-height: 100vh; position: absolute; top: 33%; border: black 1px solid; display: grid; /* grid-template-columns: repeat(3,1fr);//33% 33% 33%; //Better: 1fr 1fr 1fr -> repeat(3,1fr) grid-template-rows: 33% 33% 33%; */ grid-template: repeat(3, 1fr)/repeat(3, 1fr); grid-gap: 30px; }
 
-.grid .item {
-  width: 200px;
-  height: 200px;
-  border: blue 1px solid;
-  transition: 1s ease-in;
-}
+.grid .item { width: 200px; height: 200px; border: blue 1px solid; transition: 1s ease-in; }
 
-.grid .item:hover {
-  background: blue;
-  /*background: #373B44;  
-            background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
-            background: linear-gradient(to right, #4286f4, #373B44);
-            */
-}
+.grid .item:hover { background: blue; /*background: #373B44;   background: -webkit-linear-gradient(to right, #4286f4, #373B44);   background: linear-gradient(to right, #4286f4, #373B44); */ }
 
-.page {
-  position: absolute;
-  top: 67%;
-  width: 100%;
-  height: 100vh;
-  padding: 30px;
-  border: 1px black solid;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 7fr;
-  grid-template-rows: 40px 200px 40px;
-  text-align: center;
-}
+.page { position: absolute; top: 70%; width: 100%; height: 58vh; padding: 30px; border: 1px black solid; display: grid; grid-gap: 10px; grid-template-columns: 1fr 7fr; grid-template-rows: 40px 200px 40px; text-align: center; }
 
-.page .item {
-  border: 1px blue solid;
-  border-radius: 5px;
-}
+.page .item { border: 1px blue solid; border-radius: 5px; }
 
-.page .header {
-  grid-column: 2 / -1;
-}
+.page .header { grid-column: 2 / -1; }
 
-.page .menu {
-  grid-row: 1 / -1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-}
+.page .menu { grid-row: 1 / -1; display: flex; align-items: center; flex-direction: column; justify-content: space-around; }
 
-.page .menu .menu-itm {
-  text-align: center;
-  width: 100px;
-  height: 40px;
-  border: 1px red solid;
-  transition: .5s ease-in-out;
-}
+.page .menu .menu-itm { text-align: center; width: 100px; height: 40px; border: 1px red solid; transition: 0.5s ease-in-out; }
 
-.page .menu .menu-itm:hover {
-  background-color: red;
-  color: white;
-}
+.page .menu .menu-itm:hover { background-color: red; color: white; }
 
-.page .footer {
-  grid-column: 2/-1;
-}
+.page .footer { grid-column: 2 / -1; }
+
+.page2 { position: absolute; top: 90%; width: 100%; height: 100vh; border: 1px solid black; padding: 5px; display: grid; /* Grid justify content and align items grid: repeat(3, 1fr) / repeat(3, 1fr); grid-gap: 5px; */ /* grid-template-columns: 1fr 4fr; grid-template-rows: repeat(4, 90px); */ /* Grid area  (no support for IE)*/ grid-template-areas: "header header header" "nav main main" "aside main main" "footer footer footer"; color: aliceblue; text-align: center; /* & > * { width: 30px; height: 30px; background-color: aqua; border-radius: 5px; } */ }
+
+.page2 header { background-color: #00a2ff; grid-area: header; }
+
+.page2 main { background-color: #df1965; /* grid-row: 2/4; grid-column: 2/3; */ grid-area: main; }
+
+.page2 aside { background-color: rgba(236, 190, 37, 0.836); grid-area: aside; }
+
+.page2 nav { background-color: #93c431; grid-area: nav; }
+
+.page2 footer { background-color: #af1daf; grid-area: footer; }
+
+/*
+minmax(100px , auto) -> Specifies min and max of say widht or heigh. (min , max)
+*/
+@media screen and (max-width: 500px) { .page2 { display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; }
+  .page2 > * { width: 100%; height: 70px; } }
 /*# sourceMappingURL=style.css.map */

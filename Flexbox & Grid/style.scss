@@ -1,208 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Commissioner', sans-serif;
-    border-radius: 8px;
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Commissioner", sans-serif;
+  border-radius: 8px;
 }
-body{
-    position: relative;
-    height: 300vh;
-    h1{
-        font-weight: 400;;
-    }
-    .title{
-        position: absolute;
-        top:31%;
-    }
-    
-    .upleft{
-        position: absolute;
-        top:20%;
-        left:20%;
-        width: 50px;
-        height: 50px;
-        border: 1px solid blue;
-    }
-    .downright{
-        position: absolute;
-        top:80%;
-        left:80%;
-        width: 50px;
-        height: 50px;
-        border: 1px solid blue;
-    }
-}
-.wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-
-    //flex-start center flex-end
-    //justify-content - alignment along the main axis - that is usually horizontal axis
-    //align-itmes - alignment on the cross axis - usually vertical axis
-
-    //flex-wrap: wrap;// content will align/fall down as the widht shrinks
-
-
-    //flex-flow - direction and wrap combined
-    //flex-flow: column wrap 
-
-    //justify-content:space-evenly -> items are distributed so that the spacing between any two items (and the space to the edges) is equal
-
+body {
+  position: relative;
+  height: 300vh;
+  h1 {
+    font-weight: 400;
+  }
+  .title {
     position: absolute;
-    width: 100%;//Combined with align-itmes:center and top:50vh it becomes centered on a screen
-    top: 50vh;
-    .blue{
-        //flex:1;
-        width: 300px;
-        height: 50px;
-        border: 1px solid blue;
-        order: 1;//Default is 0
-    }
-    .green{
-        //flex:2; //So we have three children of wrapper with flex 1,2,1. That gives 4 in total of which blue takes 1, green takes 2 and red takes 1
-        width: 500px;
-        height: 100px;
-        border: 1px solid green;
-        order:2;
-    }
-    .red{
-        //flex: 1;
-        width: 50px;
-        height: 80px;
-        border: 1px solid red;
-    }
-    
-}
-.cards{
-    position: absolute;
-    border: 1px solid black;
-    width: 100%;
-    height:30vh;
-    top:5%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    .card{
-        border: 1px solid orangered;
-        width: 100px;
-        height: 100px;
-        transition: .3s ease-in;
-        &:hover{
-            background-color: orangered;
-        }
-    }
+    top: 31%;
   }
 
-  .wrapper1{
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    border: 1px solid black;
+  .upleft {
     position: absolute;
-    width: 100%;
-    top: 80vh;
-    .blue1{
-        width: 250px;
-        height: 50px;
-        border: 1px solid blue;
-        order: 1;
-        //flex-shrink: 1;
-        //flex-basis: 300px; //works similar to min-widht but overflow in y direction is hidden
+    top: 20%;
+    left: 20%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid blue;
+  }
+  .downright {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid blue;
+  }
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  //flex-start center flex-end
+  //justify-content - alignment along the main axis - that is usually horizontal axis
+  //align-itmes - alignment on the cross axis - usually vertical axis
+
+  //flex-wrap: wrap;// content will align/fall down as the widht shrinks
+
+  //flex-flow - direction and wrap combined
+  //flex-flow: column wrap
+
+  //justify-content:space-evenly -> items are distributed so that the spacing between any two items (and the space to the edges) is equal
+
+  position: absolute;
+  width: 100%; //Combined with align-itmes:center and top:50vh it becomes centered on a screen
+  top: 50vh;
+  .blue {
+    //flex:1;
+    width: 300px;
+    height: 50px;
+    border: 1px solid blue;
+    order: 1; //Default is 0
+  }
+  .green {
+    //flex:2; //So we have three children of wrapper with flex 1,2,1. That gives 4 in total of which blue takes 1, green takes 2 and red takes 1
+    width: 500px;
+    height: 100px;
+    border: 1px solid green;
+    order: 2;
+  }
+  .red {
+    //flex: 1;
+    width: 50px;
+    height: 80px;
+    border: 1px solid red;
+  }
+}
+.cards {
+  position: absolute;
+  border: 1px solid black;
+  width: 100%;
+  height: 30vh;
+  top: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .card {
+    border: 1px solid orangered;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s ease-in;
+    &:hover {
+      background-color: orangered;
     }
-    .green1{
-        
-        width: 250px;
-        height: 50px;
-        border: 1px solid green;
-        order:2;
-        //flex-shrink: 1;
-    }
-    .red1{
-        width: 250px;
-        height: 50px;
-        border: 1px solid red;
-        //flex-shrink: 3; //As we shring the width of the screen red1 div shrinks more then other two
-    }
-    
+  }
 }
 
-.grid{
-    min-width:100%;
-    height:100vh;
-    position: absolute;
-    top:33%;
-    border: black 1px solid;
-    display: grid;
-    //Column - vertical
-    //Row - horizontal
-    /*
+.wrapper1 {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  border: 1px solid black;
+  position: absolute;
+  width: 100%;
+  top: 80vh;
+  .blue1 {
+    width: 250px;
+    height: 50px;
+    border: 1px solid blue;
+    order: 1;
+    //flex-shrink: 1;
+    //flex-basis: 300px; //works similar to min-widht but overflow in y direction is hidden
+  }
+  .green1 {
+    width: 250px;
+    height: 50px;
+    border: 1px solid green;
+    order: 2;
+    //flex-shrink: 1;
+  }
+  .red1 {
+    width: 250px;
+    height: 50px;
+    border: 1px solid red;
+    //flex-shrink: 3; //As we shring the width of the screen red1 div shrinks more then other two
+  }
+}
+
+.grid {
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 33%;
+  border: black 1px solid;
+  display: grid;
+  //Column - vertical
+  //Row - horizontal
+  /*
     grid-template-columns: repeat(3,1fr);//33% 33% 33%; //Better: 1fr 1fr 1fr -> repeat(3,1fr)
     grid-template-rows: 33% 33% 33%;
     */
-    //Shorthand grid definition
-    grid-template: repeat(3,1fr) / repeat(3,1fr); // columns / rows
-    grid-gap: 30px;
-    .item{
-        width: 200px;
-        height: 200px;
-        border: blue 1px solid;
-        transition: 1s ease-in;
-        &:hover{
-            background: blue;
-            /*background: #373B44;  
+  //Shorthand grid definition
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr); // columns / rows
+  grid-gap: 30px;
+  .item {
+    width: 200px;
+    height: 200px;
+    border: blue 1px solid;
+    transition: 1s ease-in;
+    &:hover {
+      background: blue;
+      /*background: #373B44;  
             background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
             background: linear-gradient(to right, #4286f4, #373B44);
             */
-        }
     }
+  }
 }
 
-.page{
-    position: absolute;
-    top:67%;
-    width: 100%;
-    height:100vh;
-    padding: 30px;
-    border: 1px black solid;
+.page {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 58vh;
+  padding: 30px;
+  border: 1px black solid;
 
-    display: grid; //Grid property propagates to all the page children
-    grid-gap:10px ;
-    grid-template-columns: 1fr 7fr;//repeat(2,1fr);
-    grid-template-rows: 40px 200px 40px;
-    text-align: center;
-    .item{
-        border: 1px blue solid;
-        border-radius:5px ;
+  display: grid; //Grid property propagates to all the page children
+  grid-gap: 10px;
+  grid-template-columns: 1fr 7fr; //repeat(2,1fr);
+  grid-template-rows: 40px 200px 40px;
+  text-align: center;
+  .item {
+    border: 1px blue solid;
+    border-radius: 5px;
+  }
+  .header {
+    grid-column: 2 / -1; //3; // Like this header and footer take the whole row and will expand trough the entire widht. If we have two columns then we have three separating lines. Thats why start is at 1 and end is at 3
+  }
+  .menu {
+    grid-row: 1 / -1; //Like this menu expands trough the entire height of the page.
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    .menu-itm {
+      text-align: center;
+      width: 100px;
+      height: 40px;
+      border: 1px red solid;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        background-color: red;
+        color: white;
+      }
     }
-    .header{
-        grid-column: 2 / -1 ;//3; // Like this header and footer take the whole row and will expand trough the entire widht. If we have two columns then we have three separating lines. Thats why start is at 1 and end is at 3
+  }
+  .footer {
+    grid-column: 2 / -1;
+    // -1 means till the end cause we dont know how many columns we will have in the future;;
+  }
+}
+
+.page2 {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid black;
+  padding: 5px;
+  display: grid;
+
+  /* Grid justify content and align items
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 5px;
+  */
+
+  /*
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(4, 90px);
+  */
+
+  /* Grid area  (no support for IE)*/
+  grid-template-areas:
+    "header header header"
+    "nav main main"
+    "aside main main"
+    "footer footer footer";
+  color: aliceblue;
+  text-align: center;
+  //justify-content: end;
+
+  /*
+  & > * {
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 5px;
+  }
+  */
+
+  header {
+    background-color: rgb(0, 162, 255);
+    //grid-column: 1/-1;
+    grid-area: header;
+  }
+  main {
+    background-color: rgb(223, 25, 101);
+    /*
+    grid-row: 2/4;
+    grid-column: 2/3;
+    */
+    grid-area: main;
+  }
+  aside {
+    background-color: rgba(236, 190, 37, 0.836);
+    //grid-row: 2/3;
+    grid-area: aside;
+  }
+  nav {
+    background-color: rgb(147, 196, 49);
+    grid-area: nav;
+  }
+  footer {
+    background-color: rgb(175, 29, 175);
+    //grid-column: 1/-1;
+    grid-area: footer;
+  }
+}
+
+/*
+minmax(100px , auto) -> Specifies min and max of say widht or heigh. (min , max)
+*/
+
+@media screen and (max-width: 500px) {
+  .page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    & > * {
+      width: 100%;
+      height: 70px;
     }
-    .menu{ 
-        grid-row: 1 / -1; //Like this menu expands trough the entire height of the page.
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-        .menu-itm{
-            text-align: center;
-            width: 100px;
-            height: 40px;
-            border: 1px red solid;
-            transition: .5s ease-in-out;
-            &:hover{
-                background-color: red;
-                color: white;
-            }
-        }
-    }
-    .footer{
-        grid-column: 2 / -1// -1 means till the end cause we dont know how many columns we will have in the future;
-    }
+  }
 }
