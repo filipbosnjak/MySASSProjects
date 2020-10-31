@@ -54,11 +54,11 @@ button{
     border: none;
     background-color: gray;
     outline: none;
+    
 }
 @keyframes animate{
     0%{
         transform: scale(1);
-        
     }
     25%{
         transform: scale(1.2);
