@@ -254,6 +254,10 @@ body {
     grid-column: 2/3;
     */
     grid-area: main;
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    align-self: center;
   }
   aside {
     background-color: rgba(236, 190, 37, 0.836);

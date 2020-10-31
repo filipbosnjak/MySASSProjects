@@ -57,7 +57,7 @@ body .downright { position: absolute; top: 80%; left: 80%; width: 50px; height: 
 
 .page2 header { background-color: #00a2ff; grid-area: header; }
 
-.page2 main { background-color: #df1965; /* grid-row: 2/4; grid-column: 2/3; */ grid-area: main; }
+.page2 main { background-color: #df1965; /* grid-row: 2/4; grid-column: 2/3; */ grid-area: main; width: 100px; height: 100px; justify-self: center; align-self: center; }
 
 .page2 aside { background-color: rgba(236, 190, 37, 0.836); grid-area: aside; }
 
